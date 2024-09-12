@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+/* медленная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin:auto;
+}
+.wrapper {
+    max-width: 1;
+}
