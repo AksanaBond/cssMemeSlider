@@ -1,13 +1,81 @@
+@font-face {
+    font-family: "Arial";
+    font-style: normal;
+    src: url(assets/font/arial-regular.ttf);
+}
 * {
     box-sizing: border-box;
 }
 /* медленная прокрутка */
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 body {
     margin:auto;
+    background-color: black;
 }
 .wrapper {
-    max-width: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 1000px;
+}
+.mem-img > img{
+    width: 100%;
+    display: block;
+}
+.sliders {
+    transition: transform 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 70%;
+}
+.mem-img {
+display: flex;
+}
+.text-container {
+    color: aliceblue;
+    font-family: "Arial", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.04rem;
+    overflow: hidden;
+    display: flex;
+    width: 70%;
+}
+.text-container div {
+    width: 100%;
+    min-width: 100%;
+    
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+justify-content: space-around;
+gap: 10px;
+}
+.nav-btn {
+    width: 16px;
+    height: 16px; 
+    border-radius: 50%;
+    border: 2px solid greenyellow;
+    background-color: greenyellow;
+    display: inline-block;
+}
+.nav-btn:hover {
+background-color: rgb(255, 255, 255);
+border: rgb(255, 255, 255);
+}
+.nav-btn:active{
+    border: greenyellow;
+}
+.nav-btn:visited {
+    border: greenyellow;
+    background-color: red;
+}
+input[ name="slider"] {
+    display: none;
 }
