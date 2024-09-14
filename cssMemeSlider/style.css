@@ -16,10 +16,10 @@ body {
   background-color: black;
 }
 .wrapper {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 60rem;
+  margin: 1rem auto;
   overflow: hidden;
-  height: 1000px;
+  height: 90%;
 }
 .mem-img {
   display: flex;
@@ -31,6 +31,9 @@ body {
   width: 100%;
   min-width: 100%;
   display: block;
+  height: auto;
+  object-fit: contain;
+  max-height: 90vh;
 }
 .sliders {
   transition: transform 0.5s;
@@ -39,6 +42,9 @@ body {
   justify-content: space-between;
   align-content: space-between;
   height: 70%;
+  width: 93.75%;
+  overflow: hidden;
+  margin: auto;
 }
 
 .text-container {
@@ -60,17 +66,24 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 10px;
+  gap: 1rem;
   z-index: 1;
 }
+
+.nav label {
+  cursor: pointer;
+}
+
 .nav-btn {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   border: 2px solid greenyellow;
   background-color: greenyellow;
   display: inline-block;
+  margin: 0.5rem;
 }
+
 .nav-btn:hover {
   background-color: rgb(255, 255, 255);
   border: rgb(255, 255, 255);
@@ -81,6 +94,9 @@ body {
 .nav-btn:visited {
   border: greenyellow;
   background-color: red;
+}
+.btn-1 {
+  margin: 2%;
 }
 input[name="slider"] {
   display: none;
@@ -110,18 +126,41 @@ input[name="slider"] {
 #slider-4:checked ~ .text-container {
   transform: translateX(-600%);
 }
-#slider-1:checked ~ .nav > .nav-btn-1{
-    background-color:blue;
+#slider-1:checked ~ .nav > .nav-btn-1 > .nav-btn {
+  background-color: blue;
 }
-#slider-2:checked ~ .nav > .nav-btn-2{
-    background-color:blue;
+#slider-2:checked ~ .nav > .nav-btn-2 > .nav-btn {
+  background-color: blue;
 }
-#slider-3:checked ~ .nav > .nav-btn-3{
-    background-color:blue;
+#slider-3:checked ~ .nav > .nav-btn-3 > .nav-btn {
+  background-color: blue;
 }
-#slider-4:checked ~ .nav > .nav-btn-4{
-    background-color:blue;
+#slider-4:checked ~ .nav > .nav-btn-4 > .nav-btn {
+  background-color: blue;
 }
-.nav-btn {
-    padding: 5px;
+@media only screen and (max-width: 800px) {
+  .sliders {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .text-container {
+    width: 100%;
+    order: 3;
+  }
+  .mem-img {
+    height: 60%;
+  }
+  .mem-img > img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+  .nav {
+    width: 100%;
+    order: 2;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
